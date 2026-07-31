@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP } from "@/lib/gsap";
-import { CONNECTION_PATHS } from "@/lib/sprint7-content";
+import { getConnectionPaths } from "@/lib/sprint7-content";
 import { ConnectionPathTile } from "@/components/ui/ConnectionPathTile";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
@@ -12,7 +12,8 @@ export function Scene18NextStep() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const setCurrentScene = useExperienceStore((s) => s.setCurrentScene);
-  const { accentColor } = usePersonalizedContent();
+  const { accentColor, selectedCampus, selectedInterest } = usePersonalizedContent();
+  const connectionPaths = getConnectionPaths(selectedCampus, selectedInterest);
 
   useGSAP(
     () => {
@@ -70,8 +71,8 @@ export function Scene18NextStep() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {CONNECTION_PATHS.map((path, index) => (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {connectionPaths.map((path, index) => (
             <ConnectionPathTile
               key={path.id}
               label={path.label}
