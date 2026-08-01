@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getMediaFallback } from "@/lib/media";
 import type { MediaAsset } from "@/lib/media";
 
@@ -22,6 +22,10 @@ export function MediaImage({
   fill = true,
 }: MediaImageProps) {
   const [src, setSrc] = useState(asset.local);
+
+  useEffect(() => {
+    setSrc(asset.local);
+  }, [asset.local]);
 
   return (
     <Image

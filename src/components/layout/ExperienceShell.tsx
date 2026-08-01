@@ -20,6 +20,7 @@ import { Scene16FutureSnapshot } from "@/components/scenes/Scene16FutureSnapshot
 import { Scene17PictureYourself } from "@/components/scenes/Scene17PictureYourself";
 import { Scene18NextStep } from "@/components/scenes/Scene18NextStep";
 import { Scene19Sendoff } from "@/components/scenes/Scene19Sendoff";
+import { AsuBrandHeader } from "@/components/ui/AsuBrandHeader";
 import { ProgressIndicator } from "@/components/ui/ProgressIndicator";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { useExperienceStore } from "@/store/experience-store";
@@ -34,6 +35,7 @@ export function ExperienceShell() {
   return (
     <>
       <ProgressIndicator progress={progress} />
+      <AsuBrandHeader />
 
       <main id="main-content" className="relative">
         <Scene1Opening />

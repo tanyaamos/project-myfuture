@@ -59,15 +59,15 @@ export function Scene17PictureYourself() {
     >
       <div className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0">
-          <MediaImage asset={media} priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/40" />
+          <MediaImage key={media.local} asset={media} priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/50 to-charcoal/20" />
         </div>
 
         <ThemeAccentGlow color={accentColor} className="opacity-50" />
 
         <div className="relative z-10 w-full px-6 py-32 md:px-16 lg:px-24">
           <div ref={contentRef} className="max-w-3xl">
-            <p data-visit-line className="text-body-lg mb-2 text-white/60">
+            <p data-visit-line className="text-body-lg mb-2 text-white/80">
               {visit.preline}
             </p>
             <h2 data-visit-line className="text-display-xl text-white">
@@ -80,7 +80,7 @@ export function Scene17PictureYourself() {
             >
               {visit.emphasis}
             </p>
-            <p data-visit-line className="text-body-lg mt-8 max-w-xl text-white/65">
+            <p data-visit-line className="text-body-lg mt-8 max-w-xl text-white/85">
               {visit.subline}
             </p>
 

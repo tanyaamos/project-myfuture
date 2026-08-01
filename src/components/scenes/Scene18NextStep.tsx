@@ -67,7 +67,7 @@ export function Scene18NextStep() {
           </p>
           <h2 className="text-display-lg max-w-2xl text-white">
             The door is open.
-            <span className="text-white/45"> No pressure. Just possibility.</span>
+            <span className="text-white/75"> No pressure. Just possibility.</span>
           </h2>
         </div>
 

@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP, ScrollTrigger } from "@/lib/gsap";
 import { ASU_LINKS, SENDOFF } from "@/lib/sprint7-content";
 import { MEDIA } from "@/lib/media";
+import { AsuLogo } from "@/components/ui/AsuLogo";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { useLenisInstance } from "@/context/LenisContext";
 import { scrollToTop } from "@/hooks/useLenisScroll";
@@ -69,6 +70,9 @@ export function Scene19Sendoff() {
 
         <div ref={contentRef} className="relative z-10 px-6 md:px-16 lg:px-24">
           <div className="max-w-3xl">
+            <div data-sendoff-line className="mb-8 md:mb-10">
+              <AsuLogo variant="light" size="lg" />
+            </div>
             <div className="overflow-hidden">
               <h2 data-sendoff-line className="text-display-xl text-white">
                 {SENDOFF.headline}
@@ -85,7 +89,7 @@ export function Scene19Sendoff() {
             </div>
             <p
               data-sendoff-line
-              className="text-body-lg mt-6 max-w-xl text-white/55"
+              className="text-body-lg mt-6 max-w-xl text-white/85"
             >
               {SENDOFF.subline}
             </p>
@@ -107,11 +111,11 @@ export function Scene19Sendoff() {
               <button
                 type="button"
                 onClick={handleStartOver}
-                className="font-display text-sm tracking-wide text-white/45 underline-offset-4 transition-colors hover:text-white hover:underline"
+                className="font-display text-sm font-medium tracking-wide text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
               >
                 Start over
               </button>
-              <motion.p className="font-mono text-xs tracking-[0.35em] text-white/30 uppercase">
+              <motion.p className="font-mono text-xs tracking-[0.35em] text-white/55 uppercase">
                 {SENDOFF.tag}
               </motion.p>
             </div>

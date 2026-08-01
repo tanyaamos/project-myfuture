@@ -1,0 +1,14 @@
+# Placeholder video assets
+
+Add production video files here:
+
+- `opening-cinematic.mp4` — slow, moody horizon / abstract future imagery (Scene 1)
+- `campus-energy.mp4` — students walking, campus life, energy (Scene 2)
+
+Recommended specs:
+- H.264 MP4
+- 1920×1080 minimum
+- 10–30 second seamless loops
+- Muted (autoplay requirement)
+
+The app falls back to cinematic still images until these files are present.

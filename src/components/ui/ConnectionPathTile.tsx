@@ -45,7 +45,7 @@ export function ConnectionPathTile({
           {label}
         </span>
         <h3 className="text-display-md mt-3 text-white">{headline}</h3>
-        <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55 md:text-base">
+        <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/80 md:text-base">
           {description}
         </p>
       </div>
