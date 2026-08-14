@@ -50,7 +50,7 @@ export function AnimatedHeadline({
   return (
     <div ref={containerRef} className={className}>
       {lines.map((line, index) => (
-        <div key={index} className="overflow-hidden">
+        <div key={index} className="line-reveal-mask">
           <p
             data-line
             className={`text-display-xl ${line.emphasis ? "text-asu-gold" : ""} ${line.className ?? ""}`}

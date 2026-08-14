@@ -140,7 +140,7 @@ export function Scene13CampusImmersion() {
               {immersion.campusLabel}
             </p>
 
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-immersion-line
                 className="text-display-xl font-bold tracking-tight"
@@ -150,18 +150,18 @@ export function Scene13CampusImmersion() {
               </p>
             </div>
 
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <h2 data-immersion-line className="text-display-xl mt-2 text-white">
                 {immersion.headline}
               </h2>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p data-immersion-line className="text-display-xl text-white/90">
                 {immersion.subline}
               </p>
             </div>
 
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-immersion-line
                 className="text-body-lg mt-8 max-w-xl text-white/85"

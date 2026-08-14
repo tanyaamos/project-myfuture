@@ -76,24 +76,31 @@
     font-family: var(--font-display);
     font-size: clamp(2.75rem, 8vw, 6.5rem);
     font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
   }
 
   .text-display-lg {
     font-family: var(--font-display);
     font-size: clamp(2.25rem, 6vw, 5rem);
     font-weight: 700;
-    line-height: 0.98;
-    letter-spacing: -0.025em;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
   }
 
   .text-display-md {
     font-family: var(--font-display);
     font-size: clamp(1.75rem, 4.5vw, 3.5rem);
     font-weight: 600;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  /** Mask for scroll-reveal lines — keeps descenders (g, p, q, y) visible */
+  .line-reveal-mask {
+    overflow: hidden;
+    padding-bottom: 0.2em;
+    margin-bottom: -0.08em;
   }
 
   .text-body-lg {

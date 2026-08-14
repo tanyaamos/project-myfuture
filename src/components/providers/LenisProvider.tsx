@@ -26,15 +26,16 @@ export function LenisProvider({ children }: LenisProviderProps) {
 
     instance.on("scroll", ScrollTrigger.update);
 
-    const raf = (time: number) => {
-      instance.raf(time);
-      requestAnimationFrame(raf);
+    const onTick = (time: number) => {
+      instance.raf(time * 1000);
     };
 
-    requestAnimationFrame(raf);
+    gsap.ticker.add(onTick);
+    gsap.ticker.lagSmoothing(0);
     ScrollTrigger.refresh();
 
     return () => {
+      gsap.ticker.remove(onTick);
       instance.destroy();
       setLenis(null);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

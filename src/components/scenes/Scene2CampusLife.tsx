@@ -81,7 +81,7 @@ export function Scene2CampusLife() {
         <div className="relative z-10 flex h-full items-center px-6 md:px-16 lg:px-24">
           <div ref={contentRef} className="max-w-4xl">
             {CAMPUS_LINES.map((line, index) => (
-              <div key={index} className="overflow-hidden">
+              <div key={index} className="line-reveal-mask">
                 <p
                   data-campus-line
                   className={`text-display-lg will-change-transform ${line.emphasis ? "text-asu-gold" : "text-white"} ${line.className ?? ""}`}

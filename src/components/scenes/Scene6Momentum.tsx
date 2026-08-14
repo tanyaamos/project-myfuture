@@ -100,12 +100,12 @@ export function Scene6Momentum() {
           </div>
 
           <div className="max-w-4xl">
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <h2 data-momentum-line className="text-display-lg text-white">
                 {content.momentum.headline}
               </h2>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-momentum-line
                 className="text-display-lg"
