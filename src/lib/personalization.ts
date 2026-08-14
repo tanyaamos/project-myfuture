@@ -202,8 +202,8 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
       },
     ],
     momentum: {
-      stat: "Top 20",
-      statLabel: "art school in the country",
+      stat: "7",
+      statLabel: "arts and design programs ranked top 20 in the U.S.",
       headline: "Your voice",
       subline: "deserves a stage, not a syllabus.",
       imageSrc:

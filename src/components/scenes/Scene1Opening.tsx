@@ -9,7 +9,7 @@ import { MEDIA } from "@/lib/media";
 import { useExperienceStore } from "@/store/experience-store";
 
 const OPENING_LINES = [
-  { text: "YOUR FUTURE", emphasis: true },
+  { text: "Your future", emphasis: true },
   { text: "doesn't start" },
   { text: "with choosing" },
   { text: "a university." },
@@ -95,16 +95,8 @@ export function Scene1Opening() {
 
         <div className="relative z-10 flex h-full flex-col justify-center px-6 pb-24 md:px-16 lg:px-24">
           <div ref={headlineRef} className="max-w-5xl">
-            <div className="mb-8 overflow-hidden md:mb-10">
-              <p
-                data-scroll-line
-                className="font-mono text-[10px] tracking-[0.35em] text-asu-gold uppercase md:text-xs"
-              >
-                Arizona State University
-              </p>
-            </div>
             {OPENING_LINES.map((line, index) => (
-              <div key={index} className="overflow-hidden">
+              <div key={index} className="line-reveal-mask">
                 <p
                   data-scroll-line
                   className={`text-display-xl will-change-transform ${line.emphasis ? "text-asu-gold" : "text-white"} ${line.className ?? ""}`}

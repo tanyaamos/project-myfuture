@@ -5,17 +5,11 @@ import type { StatBeat } from "@/lib/sprint3-content";
 interface StatBeatPanelProps {
   beat: StatBeat;
   accentColor: string;
-  active?: boolean;
 }
 
-export function StatBeatPanel({ beat, accentColor, active = false }: StatBeatPanelProps) {
+export function StatBeatPanel({ beat, accentColor }: StatBeatPanelProps) {
   return (
-    <div
-      className={`absolute inset-0 flex flex-col items-center justify-center px-6 text-center transition-opacity duration-700 md:px-12 ${
-        active ? "opacity-100" : "opacity-0"
-      }`}
-      aria-hidden={!active}
-    >
+    <div className="flex flex-col items-center justify-center px-6 text-center md:px-12">
       <p
         className="text-display-xl mb-4 font-bold tracking-tight"
         style={{ color: accentColor }}

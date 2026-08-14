@@ -217,9 +217,26 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Creative professional on stage",
     },
     statBeats: [
-      { stat: "Top 20", label: "arts & design programs", sublabel: "7 programs ranked nationally" },
-      { stat: "600+", label: "arts faculty", sublabel: "mentors who are leaders in their fields" },
-      { stat: "70%", label: "of employers want creativity", sublabel: "the most in-demand skill" },
+      {
+        stat: "7",
+        label: "arts and design programs",
+        sublabel: "ranked top 20 in the U.S.",
+      },
+      {
+        stat: "600+",
+        label: "arts and design",
+        sublabel: "faculty members",
+      },
+      {
+        stat: "35",
+        label: "arts and design",
+        sublabel: "student clubs",
+      },
+      {
+        stat: "38,000+",
+        label: "alumni connections in",
+        sublabel: "the arts and design",
+      },
     ],
     experiences: [
       {

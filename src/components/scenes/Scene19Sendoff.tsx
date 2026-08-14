@@ -73,12 +73,12 @@ export function Scene19Sendoff() {
             <div data-sendoff-line className="mb-8 md:mb-10">
               <AsuLogo variant="light" size="lg" />
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <h2 data-sendoff-line className="text-display-xl text-white">
                 {SENDOFF.headline}
               </h2>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-sendoff-line
                 className="text-display-xl"

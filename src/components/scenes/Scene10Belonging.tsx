@@ -88,17 +88,17 @@ export function Scene10Belonging() {
               {belonging.chapter}
             </p>
 
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p data-belong-line className="text-body-lg mb-2 text-white/80">
                 {belonging.preline}
               </p>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <h2 data-belong-line className="text-display-xl text-white">
                 {belonging.headline}
               </h2>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-belong-line
                 className="text-display-xl"
@@ -107,7 +107,7 @@ export function Scene10Belonging() {
                 {belonging.emphasis}
               </p>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p data-belong-line className="text-body-lg mt-8 max-w-xl text-white/85">
                 {belonging.subline}
               </p>

@@ -106,17 +106,17 @@ export function Scene4PersonalizedMirror() {
               </motion.p>
             )}
 
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p data-mirror-line className="text-body-lg mb-2 text-white/80">
                 {content.mirror.preline}
               </p>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <h2 data-mirror-line className="text-display-xl text-white">
                 {content.mirror.headline}
               </h2>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p
                 data-mirror-line
                 className="text-display-xl"
@@ -125,7 +125,7 @@ export function Scene4PersonalizedMirror() {
                 {content.mirror.emphasis}
               </p>
             </div>
-            <div className="overflow-hidden">
+            <div className="line-reveal-mask">
               <p data-mirror-line className="text-body-lg mt-8 max-w-xl text-white/85">
                 {content.mirror.subline}
               </p>
