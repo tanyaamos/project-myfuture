@@ -44,7 +44,7 @@ export function Scene3Interests() {
 
       gsap.fromTo(
         heading,
-        { y: 80, opacity: 0 },
+        { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
@@ -106,27 +106,37 @@ export function Scene3Interests() {
     <section
       ref={sectionRef}
       id="scene-interests"
-      className="relative min-h-screen bg-sandstone-50 pb-24 md:min-h-[110vh] md:pb-32"
+      className="relative z-20 -mt-[14vh]"
       aria-label="Choose your interests"
     >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-asu-gold/20 blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-asu-maroon/10 blur-3xl" />
-      </div>
+      {/* Transparent overlap — opening hero stays visible during pull-up */}
+      <div className="pointer-events-none h-[14vh]" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 md:px-12 md:pt-36">
-        <motion.h2
-          ref={headingRef}
-          className="text-display-lg mb-4 max-w-3xl text-charcoal md:mb-8"
-        >
-          What pulls you in?
-        </motion.h2>
+      <div className="relative min-h-screen bg-sandstone-50 md:min-h-[100dvh]">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-20 bg-gradient-to-b from-transparent to-sandstone-50"
+          aria-hidden="true"
+        />
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-asu-gold/20 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-asu-maroon/10 blur-3xl" />
+        </div>
 
-        <p className="mb-8 max-w-xl text-body-lg text-charcoal-muted md:mb-10">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-6 pt-24 pb-8 md:min-h-[100dvh] md:px-12 md:pt-28 md:pb-10">
+        <div className="mb-6 max-w-3xl shrink-0 md:mb-8">
+          <motion.h2
+            ref={headingRef}
+            className="text-display-lg mb-3 text-charcoal md:mb-4"
+          >
+            What pulls you in?
+          </motion.h2>
+
+          <p className="max-w-xl text-body-lg leading-relaxed text-charcoal-muted">
           {isGated
             ? "Choose one to continue — or explore degrees first, then come back and tap your pick."
             : "Tap what resonates. Your path adapts from here."}
-        </p>
+          </p>
+        </div>
 
         {/* Mobile: flowing stack */}
         <div className="flex flex-col gap-3 md:hidden">
@@ -144,8 +154,8 @@ export function Scene3Interests() {
           ))}
         </div>
 
-        {/* Desktop: cinematic floating field */}
-        <div className="relative hidden h-[520px] md:block lg:h-[580px]">
+        {/* Desktop: cinematic floating field — height capped so pin doesn't clip copy below */}
+        <div className="relative hidden min-h-[320px] flex-1 md:block md:max-h-[calc(100dvh-18rem)] lg:max-h-[calc(100dvh-17rem)]">
           {INTERESTS.map((interest, index) => (
             <FloatingInterestCard
               key={interest.id}
@@ -176,7 +186,7 @@ export function Scene3Interests() {
           ) : isGated ? (
             <motion.div
               key="gate"
-              className="mt-10 flex flex-col items-center gap-3 md:mt-16"
+              className="mt-8 flex shrink-0 flex-col items-center gap-3 md:mt-10"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
@@ -218,6 +228,7 @@ export function Scene3Interests() {
             Browse degrees for your interest →
           </motion.a>
         )}
+        </div>
       </div>
     </section>
   );

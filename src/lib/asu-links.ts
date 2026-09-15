@@ -172,36 +172,178 @@ export const COLLEGE_BY_INTEREST: Record<
   },
 };
 
+export interface ProgramDegreeInfo {
+  href: string;
+  degreeName: string;
+}
+
 /** Map experience program names to specific degree pages on degrees.asu.edu */
-const PROGRAM_DEGREE_LINKS: { keywords: string[]; path: string }[] = [
-  { keywords: ["Dreamscape"], path: "/bachelors/major/ASU00/LABSCMBS/biological-sciences-biomedical-sciences" },
-  { keywords: ["Barrett"], path: "/bachelors/major-list/accelerated-programs" },
-  { keywords: ["Luminosity"], path: "/bachelors/major/ASU00/CSCSEBS/computer-science" },
-  { keywords: ["Fulton", "Engineering"], path: "/bachelors/major/ASU00/ESCSESBS/computer-science-software-engineering" },
-  { keywords: ["Health Solutions"], path: "/bachelors/major/ASU00/NUHSCBAS/applied-science-health-sciences" },
-  { keywords: ["Next Generation Service"], path: "/bachelors/major/ASU00/LACELBA/civic-and-economic-thought-and-leadership" },
-  { keywords: ["Global Futures Impact"], path: "/bachelors/major/ASU00/SUSUSTBS/sustainability" },
-  { keywords: ["MIX Center"], path: "/bachelors/major/ASU00/HIFMPBFA/film-and-media-production" },
-  { keywords: ["Herberger"], path: "/bachelors/major/ASU00/FAARTEBFA/art-art-education" },
-  { keywords: ["California Center"], path: "/bachelors/major/ASU00/HIFMPBFA/film-and-media-production" },
-  { keywords: ["Dialogues for Democracy"], path: "/bachelors/major/ASU00/PPCASPBA/community-advocacy-and-social-policy" },
-  { keywords: ["Watts"], path: "/bachelors/major/ASU00/BABUSPBA/business-public-service-and-public-policy" },
-  { keywords: ["Antarctica", "Study Abroad"], path: "/bachelors/major/ASU00/SUSUSTBS/sustainability" },
-  { keywords: ["Venture Devils"], path: "/bachelors/major/ASU00/BABUENTBS/business-entrepreneurship" },
-  { keywords: ["W. P. Carey"], path: "/bachelors/major/ASU00/BABUSBA/business" },
-  { keywords: ["Thunderbird"], path: "/bachelors/major/ASU00/TBINTRABS/international-trade" },
-  { keywords: ["Biodesign"], path: "/bachelors/major/ASU00/LABSCMBS/biological-sciences-biomedical-sciences" },
-  { keywords: ["NASA", "Space Futures"], path: "/bachelors/major/ASU00/LASESGSBS/earth-and-space-exploration-geological-and-planetary-sciences" },
-  { keywords: ["BIOS", "Bermuda"], path: "/bachelors/major/ASU00/LAEESBS/earth-and-environmental-sciences" },
-  { keywords: ["Narrative", "Emerging Media"], path: "/bachelors/major/ASU00/LAENGNSBA/english-narrative-studies" },
-  { keywords: ["Esports", "Inferno"], path: "/bachelors/major/ASU00/HIGSPBS/game-studio-production" },
-  { keywords: ["Sustainability"], path: "/bachelors/major/ASU00/SUSUSTBS/sustainability" },
-  { keywords: ["Rob Walton", "Global Futures"], path: "/bachelors/major/ASU00/SUSUSTBS/sustainability" },
-  { keywords: ["Indigenous Innovation"], path: "/bachelors/major/ASU00/ASAMSTBA/american-indian-studies" },
-  { keywords: ["University College"], path: "/bachelors/major-list/interest-area/14" },
-  { keywords: ["eAdvisor"], path: "/bachelors/major-list/interest-area/14" },
-  { keywords: ["Sun Devil Welcome"], path: "/bachelors" },
-  { keywords: ["4 Campuses"], path: "/bachelors" },
+const PROGRAM_DEGREE_LINKS: { keywords: string[]; path: string; degreeName: string }[] = [
+  {
+    keywords: ["Dreamscape"],
+    path: "/bachelors/major/ASU00/LABSCMBS/biological-sciences-biomedical-sciences",
+    degreeName: "Biological Sciences (Biomedical Sciences)",
+  },
+  {
+    keywords: ["Barrett"],
+    path: "/bachelors/major-list/accelerated-programs",
+    degreeName: "Barrett Honors programs",
+  },
+  {
+    keywords: ["Luminosity"],
+    path: "/bachelors/major/ASU00/CSCSEBS/computer-science",
+    degreeName: "Computer Science (B.S.)",
+  },
+  {
+    keywords: ["Fulton", "Engineering"],
+    path: "/bachelors/major/ASU00/ESCSESBS/computer-science-software-engineering",
+    degreeName: "Computer Science (Software Engineering)",
+  },
+  {
+    keywords: ["Health Solutions"],
+    path: "/bachelors/major/ASU00/NUHSCBAS/applied-science-health-sciences",
+    degreeName: "Applied Science (Health Sciences)",
+  },
+  {
+    keywords: ["Next Generation Service"],
+    path: "/bachelors/major/ASU00/LACELBA/civic-and-economic-thought-and-leadership",
+    degreeName: "Civic & Economic Thought and Leadership",
+  },
+  {
+    keywords: ["Global Futures Impact"],
+    path: "/bachelors/major/ASU00/SUSUSTBS/sustainability",
+    degreeName: "Sustainability (B.S.)",
+  },
+  {
+    keywords: ["MIX Center"],
+    path: "/bachelors/major/ASU00/HIFMPBFA/film-and-media-production",
+    degreeName: "Film and Media Production (B.F.A.)",
+  },
+  {
+    keywords: ["Herberger"],
+    path: "/bachelors/major/ASU00/FAARTEBFA/art-art-education",
+    degreeName: "Art (Art Education) (B.F.A.)",
+  },
+  {
+    keywords: ["California Center"],
+    path: "/bachelors/major/ASU00/HIFMPBFA/film-and-media-production",
+    degreeName: "Film and Media Production (B.F.A.)",
+  },
+  {
+    keywords: ["Dialogues for Democracy"],
+    path: "/bachelors/major/ASU00/PPCASPBA/community-advocacy-and-social-policy",
+    degreeName: "Community Advocacy and Social Policy",
+  },
+  {
+    keywords: ["Watts"],
+    path: "/bachelors/major/ASU00/BABUSPBA/business-public-service-and-public-policy",
+    degreeName: "Business (Public Service and Public Policy)",
+  },
+  {
+    keywords: ["Antarctica", "Study Abroad"],
+    path: "/bachelors/major/ASU00/SUSUSTBS/sustainability",
+    degreeName: "Sustainability (B.S.)",
+  },
+  {
+    keywords: ["Venture Devils"],
+    path: "/bachelors/major/ASU00/BABUENTBS/business-entrepreneurship",
+    degreeName: "Business Entrepreneurship (B.S.)",
+  },
+  {
+    keywords: ["W. P. Carey"],
+    path: "/bachelors/major/ASU00/BABUSBA/business",
+    degreeName: "Business (B.S.)",
+  },
+  {
+    keywords: ["Thunderbird"],
+    path: "/bachelors/major/ASU00/TBINTRABS/international-trade",
+    degreeName: "International Trade (B.S.)",
+  },
+  {
+    keywords: ["Biodesign"],
+    path: "/bachelors/major/ASU00/LABSCMBS/biological-sciences-biomedical-sciences",
+    degreeName: "Biological Sciences (Biomedical Sciences)",
+  },
+  {
+    keywords: ["NASA", "Space Futures"],
+    path: "/bachelors/major/ASU00/LASESGSBS/earth-and-space-exploration-geological-and-planetary-sciences",
+    degreeName: "Earth and Space Exploration",
+  },
+  {
+    keywords: ["BIOS", "Bermuda"],
+    path: "/bachelors/major/ASU00/LAEESBS/earth-and-environmental-sciences",
+    degreeName: "Earth and Environmental Sciences (B.S.)",
+  },
+  {
+    keywords: ["Narrative", "Emerging Media"],
+    path: "/bachelors/major/ASU00/LAENGNSBA/english-narrative-studies",
+    degreeName: "English (Narrative Studies)",
+  },
+  {
+    keywords: ["Esports", "Inferno"],
+    path: "/bachelors/major/ASU00/HIGSPBS/game-studio-production",
+    degreeName: "Game Studio Production (B.S.)",
+  },
+  {
+    keywords: ["Sustainability"],
+    path: "/bachelors/major/ASU00/SUSUSTBS/sustainability",
+    degreeName: "Sustainability (B.S.)",
+  },
+  {
+    keywords: ["Rob Walton", "Global Futures"],
+    path: "/bachelors/major/ASU00/SUSUSTBS/sustainability",
+    degreeName: "Sustainability (B.S.)",
+  },
+  {
+    keywords: ["Indigenous Innovation"],
+    path: "/bachelors/major/ASU00/ASAMSTBA/american-indian-studies",
+    degreeName: "American Indian Studies (B.A.)",
+  },
+  {
+    keywords: ["University College"],
+    path: "/bachelors/major-list/interest-area/14",
+    degreeName: "Exploratory majors",
+  },
+  {
+    keywords: ["eAdvisor"],
+    path: "/bachelors/major-list/interest-area/14",
+    degreeName: "Exploratory majors",
+  },
+  {
+    keywords: ["Sun Devil Welcome"],
+    path: "/bachelors",
+    degreeName: "Undergraduate degrees",
+  },
+  {
+    keywords: ["4 Campuses"],
+    path: "/bachelors",
+    degreeName: "Undergraduate degrees",
+  },
+  {
+    keywords: ["Downtown Phoenix campus"],
+    path: "/bachelors/major-list/location/downtown-phoenix",
+    degreeName: "Downtown Phoenix degrees",
+  },
+  {
+    keywords: ["Polytechnic campus"],
+    path: "/bachelors/major-list/location/polytechnic",
+    degreeName: "Polytechnic degrees",
+  },
+  {
+    keywords: ["West Valley campus"],
+    path: "/bachelors/major-list/location/west",
+    degreeName: "West Valley degrees",
+  },
+  {
+    keywords: ["ASU Online"],
+    path: "/bachelors/major-list/location/online",
+    degreeName: "ASU Online degrees",
+  },
+  {
+    keywords: ["Four campuses"],
+    path: "/bachelors",
+    degreeName: "Undergraduate degrees",
+  },
 ];
 
 export const PLACE_LINKS: Record<string, string> = {
@@ -245,14 +387,24 @@ export function getDegreesBrowseForInterest(interestId: InterestId | null): stri
   return degreeUrl(area.path, `degrees-${interestId}`);
 }
 
-export function getProgramLink(program: string): string {
+export function getProgramDegreeInfo(program: string): ProgramDegreeInfo {
   const normalized = program.toLowerCase();
   for (const entry of PROGRAM_DEGREE_LINKS) {
     if (entry.keywords.some((kw) => normalized.includes(kw.toLowerCase()))) {
-      return degreeUrl(entry.path, "program");
+      return {
+        href: degreeUrl(entry.path, "program"),
+        degreeName: entry.degreeName,
+      };
     }
   }
-  return ASU_LINKS.degrees;
+  return {
+    href: ASU_LINKS.degrees,
+    degreeName: "Related undergraduate degrees",
+  };
+}
+
+export function getProgramLink(program: string): string {
+  return getProgramDegreeInfo(program).href;
 }
 
 export function getPlaceLink(title: string): string {

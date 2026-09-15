@@ -80,11 +80,29 @@
     letter-spacing: -0.02em;
   }
 
+  /** Campus life scene — sized to fit 6 reveal lines in one viewport */
+  .text-display-campus {
+    font-family: var(--font-display);
+    font-size: clamp(1.875rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+
+  /** Opening scene — between display-lg and display-xl; clears the ASU logo */
+  .text-display-opening {
+    font-family: var(--font-display);
+    font-size: clamp(2.125rem, 6.5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
   .text-display-lg {
     font-family: var(--font-display);
     font-size: clamp(2.25rem, 6vw, 5rem);
     font-weight: 700;
-    line-height: 1.06;
+    line-height: 1.12;
     letter-spacing: -0.02em;
   }
 
@@ -99,8 +117,8 @@
   /** Mask for scroll-reveal lines — keeps descenders (g, p, q, y) visible */
   .line-reveal-mask {
     overflow: hidden;
-    padding-bottom: 0.2em;
-    margin-bottom: -0.08em;
+    padding-bottom: 0.35em;
+    margin-bottom: 0;
   }
 
   .text-body-lg {

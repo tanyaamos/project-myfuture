@@ -61,12 +61,12 @@ export function Scene9RealExperiences() {
           Real experiences
         </p>
         <h2 className="text-display-lg max-w-3xl text-white">
-          {isFullyPersonalized ? "Picked for your path." : "Not brochures."}
+          {isFullyPersonalized ? "Degrees for your path." : "Not brochures."}
           <br />
           <span className="text-white/75">
             {isFullyPersonalized
-              ? "Programs matched to you."
-              : "Actual programs. Actual people."}
+              ? "Specific majors matched to you."
+              : "Actual programs. Actual degrees."}
           </span>
         </h2>
       </div>

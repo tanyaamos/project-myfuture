@@ -50,9 +50,9 @@ export const DEFAULT_SPRINT3: Sprint3Content = {
     imageAlt: MEDIA.scenes.graduatingStudent.alt,
   },
   statBeats: [
-    { stat: "#1", label: "in innovation", sublabel: "among public universities — 10 years running" },
+    { stat: "#1", label: "in innovation", sublabel: "U.S. News — ahead of MIT & Stanford" },
+    { stat: "30+", label: "#1 rankings", sublabel: "on lists in the last 3 years — innovation, sustainability, global impact" },
     { stat: "400+", label: "undergraduate degrees", sublabel: "across 18 colleges and schools" },
-    { stat: "1,000+", label: "student organizations", sublabel: "find your people from day one" },
   ],
   experiences: [
     {
@@ -107,8 +107,9 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Students collaborating on a technology project",
     },
     statBeats: [
-      { stat: "#1", label: "in innovation", sublabel: "U.S. News — 10 consecutive years" },
-      { stat: "Full letter", label: "grade improvement", sublabel: "Dreamscape Learn VR biology lab" },
+      { stat: "#1", label: "in innovation", sublabel: "U.S. News — ahead of MIT & Stanford" },
+      { stat: "Top 10", label: "worldwide for U.S. utility patents", sublabel: "ranked alongside MIT and Stanford in 2023" },
+      { stat: "Semiconductor", label: "industry leader", sublabel: "preparing students for America's chip revolution" },
       { stat: "1,000+", label: "students in Venture Devils", sublabel: "ASU's startup incubator" },
     ],
     experiences: [
@@ -163,7 +164,8 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
     },
     statBeats: [
       { stat: "Top 10", label: "nursing program", sublabel: "in the nation" },
-      { stat: "24/7/365", label: "counseling services", sublabel: "free, unlimited — wherever you are" },
+      { stat: "AI", label: "advancing medicine", sublabel: "researchers using AI for faster diagnosis and new treatments" },
+      { stat: "Rapid", label: "blood testing", sublabel: "detecting hundreds of diseases to improve vaccines and patient care" },
       { stat: "95%", label: "Barrett retention rate", sublabel: "students who find community, stay" },
     ],
     experiences: [
@@ -289,8 +291,9 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Leader addressing a community",
     },
     statBeats: [
-      { stat: "#1", label: "in sustainability", sublabel: "among U.S. universities" },
-      { stat: "Top 25", label: "for free speech", sublabel: "FIRE Foundation ranking" },
+      { stat: "#1", label: "in global impact", sublabel: "ahead of MIT & Penn State" },
+      { stat: "#1", label: "in sustainability", sublabel: "ahead of Stanford & UC Berkeley" },
+      { stat: "Principled", label: "Innovation", sublabel: "character and values at the center of every breakthrough" },
       { stat: "300+", label: "global education programs", sublabel: "65+ countries" },
     ],
     experiences: [
@@ -344,6 +347,7 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Entrepreneur presenting a startup idea",
     },
     statBeats: [
+      { stat: "No. 17", label: "business school research", sublabel: "worldwide — Financial Times · W. P. Carey School" },
       { stat: "Top 25", label: "undergraduate business", sublabel: "W. P. Carey School of Business" },
       { stat: "620+", label: "jobs at ASU-linked startups", sublabel: "Venture Devils ecosystem" },
       { stat: "130+", label: "Fortune 500 recruiters", sublabel: "on campus hiring ASU grads" },
@@ -399,8 +403,9 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
     },
     statBeats: [
       { stat: "$700M+", label: "annual research", sublabel: "one of the largest research enterprises in the U.S." },
-      { stat: "400+", label: "National Academies faculty", sublabel: "including Nobel laureates" },
-      { stat: "Top producer", label: "of Fulbright scholars", sublabel: "ahead of Stanford, USC, Johns Hopkins" },
+      { stat: "Top 10", label: "worldwide for U.S. utility patents", sublabel: "ranked alongside MIT and Stanford in 2023" },
+      { stat: "First-of-its-kind", label: "X-ray instrument", sublabel: "blazing trails in renewable energy, drug discovery, and computing" },
+      { stat: "AI", label: "advancing medicine", sublabel: "researchers using AI for faster diagnosis and new treatments" },
     ],
     experiences: [
       {
@@ -453,8 +458,9 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Gaming and interactive media workspace",
     },
     statBeats: [
+      { stat: "Top 10", label: "most innovative gaming programs", sublabel: "where imagination meets cutting-edge technology" },
       { stat: "Planar VP", label: "virtual production", sublabel: "same tech used in The Mandalorian — at ASU film schools" },
-      { stat: "35", label: "arts & design clubs", sublabel: "including game design and esports" },
+      { stat: "#1", label: "in innovation", sublabel: "U.S. News — ahead of MIT & Stanford" },
       { stat: "MIX", label: "Center · Mesa", sublabel: "blockbuster films to VR games — one facility" },
     ],
     experiences: [
@@ -508,9 +514,10 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Natural landscape and environmental stewardship",
     },
     statBeats: [
-      { stat: "#1", label: "university for sustainability", sublabel: "in the United States" },
-      { stat: "24", label: "national parks & monuments", sublabel: "within reach in Arizona" },
-      { stat: "300", label: "sunny days a year", sublabel: "field research in your backyard" },
+      { stat: "#1", label: "university for sustainability", sublabel: "ahead of Stanford & UC Berkeley" },
+      { stat: "Net-zero", label: "6 years early", sublabel: "one of only 17 universities worldwide to hit the target ahead of schedule" },
+      { stat: "550", label: "tons diverted", sublabel: "plastic waste turned into usable products — microfactory partnership" },
+      { stat: "Hawaii", label: "coral reef research", sublabel: "scientists studying and restoring reef health in the Pacific" },
     ],
     experiences: [
       {
@@ -563,9 +570,10 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
       imageAlt: "Student exploring academic options",
     },
     statBeats: [
+      { stat: "30+", label: "#1 rankings", sublabel: "on lists in the last 3 years — innovation, sustainability, global impact" },
       { stat: "400+", label: "undergraduate degrees", sublabel: "if it exists, ASU probably teaches it" },
-      { stat: "18", label: "colleges & schools", sublabel: "sample before you commit" },
-      { stat: "95%", label: "on-campus retention", sublabel: "community from day one keeps you here" },
+      { stat: "#1", label: "in innovation", sublabel: "ahead of MIT & Stanford" },
+      { stat: "#1", label: "in sustainability", sublabel: "ahead of Stanford & UC Berkeley" },
     ],
     experiences: [
       {

@@ -263,6 +263,9 @@ const CAMPUS_OVERLAYS: Record<
   },
 };
 
+/** Exported for content-matrix tooling */
+export { LEARNING_OVERLAYS, CAMPUS_OVERLAYS };
+
 export function getEnhancedSprint3Content(
   interestId: InterestId | null,
   learningStyleId: LearningStyleId | null,

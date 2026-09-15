@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { Scene1Opening } from "@/components/scenes/Scene1Opening";
-import { Scene2CampusLife } from "@/components/scenes/Scene2CampusLife";
 import { Scene3Interests } from "@/components/scenes/Scene3Interests";
 import { Scene4PersonalizedMirror } from "@/components/scenes/Scene4PersonalizedMirror";
 import { Scene5PathReveal } from "@/components/scenes/Scene5PathReveal";
@@ -39,7 +38,6 @@ export function ExperienceShell() {
 
       <main id="main-content" className="relative">
         <Scene1Opening />
-        <Scene2CampusLife />
         <Scene3Interests />
         <Scene4PersonalizedMirror />
         <Scene5PathReveal />
