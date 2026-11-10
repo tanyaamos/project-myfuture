@@ -8,6 +8,7 @@ import { gsap, registerGSAP } from "@/lib/gsap";
 import { CAMPUSES } from "@/lib/sprint4-content";
 import { getCampusExploreLinks } from "@/lib/asu-links";
 import { CampusChoiceCard } from "@/components/ui/CampusChoiceCard";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { useExperienceStore } from "@/store/experience-store";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 
@@ -79,12 +80,7 @@ export function Scene12CampusChoice() {
       </AnimatePresence>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 pt-28 md:px-12 md:pt-36">
-        <p
-          className="mb-4 font-mono text-xs tracking-[0.25em] uppercase"
-          style={{ color: accentColor }}
-        >
-          Almost there
-        </p>
+        <SceneKicker className="mb-4">Almost there</SceneKicker>
 
         <motion.h2
           ref={headingRef}

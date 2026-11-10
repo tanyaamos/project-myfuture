@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger, registerGSAP } from "@/lib/gsap";
 import { PathPanel } from "@/components/ui/PathPanel";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { getGlobalPlaces } from "@/lib/sprint5-content";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
@@ -74,12 +75,7 @@ export function Scene15UnexpectedPlaces() {
         ref={headingRef}
         className="pointer-events-none absolute top-0 right-0 left-0 z-20 px-6 pt-28 md:px-16 md:pt-32"
       >
-        <p
-          className="mb-2 font-mono text-xs tracking-[0.25em] uppercase"
-          style={{ color: accentColor }}
-        >
-          Beyond campus
-        </p>
+        <SceneKicker className="mb-2">Beyond campus</SceneKicker>
         <h2 className="text-display-md max-w-xl text-white">
           Go to class in
           <br />

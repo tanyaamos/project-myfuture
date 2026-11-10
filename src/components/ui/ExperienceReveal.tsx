@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getProgramLink } from "@/lib/asu-links";
+import { getProgramDegreeInfo } from "@/lib/asu-links";
 import { ExploreLink } from "@/components/ui/ExploreLink";
 import type { RealExperience } from "@/lib/sprint3-content";
 
@@ -14,6 +14,7 @@ interface ExperienceRevealProps {
 
 export function ExperienceReveal({ experience, index, accentColor }: ExperienceRevealProps) {
   const isEven = index % 2 === 0;
+  const degree = getProgramDegreeInfo(experience.program);
 
   return (
     <motion.article
@@ -46,9 +47,15 @@ export function ExperienceReveal({ experience, index, accentColor }: ExperienceR
         </span>
         <h3 className="text-display-md mb-6 max-w-lg text-white">{experience.headline}</h3>
         <p className="max-w-md text-body-lg text-white/85">{experience.description}</p>
+        <p
+          className="mt-8 font-display text-lg font-semibold tracking-tight md:text-xl"
+          style={{ color: accentColor }}
+        >
+          {degree.degreeName}
+        </p>
         <ExploreLink
-          href={getProgramLink(experience.program)}
-          label="View degree on degrees.asu.edu"
+          href={degree.href}
+          label="Explore this degree on degrees.asu.edu"
           accentColor={accentColor}
         />
       </div>

@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP } from "@/lib/gsap";
 import { getConnectionPaths } from "@/lib/sprint7-content";
 import { ConnectionPathTile } from "@/components/ui/ConnectionPathTile";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
 
@@ -59,12 +60,7 @@ export function Scene18NextStep() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-12">
         <div ref={headingRef} className="mb-12 md:mb-16">
-          <p
-            className="mb-3 font-mono text-xs tracking-[0.25em] uppercase"
-            style={{ color: accentColor }}
-          >
-            When you&apos;re ready
-          </p>
+          <SceneKicker className="mb-3">When you&apos;re ready</SceneKicker>
           <h2 className="text-display-lg max-w-2xl text-white">
             The door is open.
             <span className="text-white/75"> No pressure. Just possibility.</span>
@@ -79,6 +75,7 @@ export function Scene18NextStep() {
               headline={path.headline}
               description={path.description}
               href={path.href}
+              ctaLabel={path.ctaLabel}
               index={index}
               accentColor={accentColor}
               external={path.external}

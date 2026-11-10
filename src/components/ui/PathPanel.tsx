@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { getPlaceLink } from "@/lib/asu-links";
 import { ExploreLink } from "@/components/ui/ExploreLink";
 import type { PathMoment } from "@/lib/personalization";
 
@@ -38,10 +37,13 @@ export function PathPanel({ moment, index, accentColor }: PathPanelProps) {
         </span>
         <h3 className="text-display-md mb-4 max-w-2xl text-white">{moment.title}</h3>
         <p className="max-w-lg text-body-lg text-white/75">{moment.description}</p>
-        <ExploreLink
-          href={moment.href ?? getPlaceLink(moment.title)}
-          accentColor={accentColor}
-        />
+        {moment.href && (
+          <ExploreLink
+            href={moment.href}
+            label={moment.linkLabel ?? "Learn more"}
+            accentColor={accentColor}
+          />
+        )}
       </div>
     </article>
   );

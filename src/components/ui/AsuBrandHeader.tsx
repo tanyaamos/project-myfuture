@@ -1,21 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { AsuLogo } from "@/components/ui/AsuLogo";
-import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { useExperienceStore } from "@/store/experience-store";
 
-/** Subtle top-left ASU mark — visible at the start, fades as the user scrolls in. */
+const LIGHT_SCENES = new Set(["interests", "campus-choice"]);
+
+/** Top-left ASU mark — sits above the progress bar in the fixed header. */
 export function AsuBrandHeader() {
-  const progress = useScrollProgress();
-  const opacity = Math.max(0, 1 - progress / 0.06);
+  const currentScene = useExperienceStore((s) => s.currentScene);
+  const variant = LIGHT_SCENES.has(currentScene) ? "dark" : "light";
 
   return (
-    <motion.div
-      className="pointer-events-none fixed top-[3.25rem] left-5 z-40 md:top-[3.5rem] md:left-8"
-      style={{ opacity }}
-      aria-hidden={opacity < 0.05}
+    <div
+      className={`inline-flex rounded-md px-3 py-2 backdrop-blur-md transition-colors duration-500 ${
+        variant === "light" ? "bg-charcoal/30" : "bg-white/80 shadow-sm"
+      }`}
     >
-      <AsuLogo variant="light" size="md" />
-    </motion.div>
+      <AsuLogo variant={variant} size="md" />
+    </div>
   );
 }

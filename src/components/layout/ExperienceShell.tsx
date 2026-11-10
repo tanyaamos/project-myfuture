@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { Scene1Opening } from "@/components/scenes/Scene1Opening";
-import { Scene2CampusLife } from "@/components/scenes/Scene2CampusLife";
 import { Scene3Interests } from "@/components/scenes/Scene3Interests";
 import { Scene4PersonalizedMirror } from "@/components/scenes/Scene4PersonalizedMirror";
 import { Scene5PathReveal } from "@/components/scenes/Scene5PathReveal";
@@ -34,12 +33,15 @@ export function ExperienceShell() {
 
   return (
     <>
-      <ProgressIndicator progress={progress} />
-      <AsuBrandHeader />
+      <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 px-5 pt-4 pb-3 md:px-8">
+        <AsuBrandHeader />
+        <div className="mt-3">
+          <ProgressIndicator progress={progress} />
+        </div>
+      </header>
 
       <main id="main-content" className="relative">
         <Scene1Opening />
-        <Scene2CampusLife />
         <Scene3Interests />
         <Scene4PersonalizedMirror />
         <Scene5PathReveal />

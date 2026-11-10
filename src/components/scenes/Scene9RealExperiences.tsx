@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP } from "@/lib/gsap";
 import { ExperienceReveal } from "@/components/ui/ExperienceReveal";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
 
@@ -54,19 +55,14 @@ export function Scene9RealExperiences() {
         ref={headingRef}
         className="px-6 pt-28 pb-12 md:px-16 md:pt-36 md:pb-16 lg:px-24"
       >
-        <p
-          className="mb-3 font-mono text-xs tracking-[0.25em] uppercase"
-          style={{ color: accentColor }}
-        >
-          Real experiences
-        </p>
+        <SceneKicker className="mb-3">Real experiences</SceneKicker>
         <h2 className="text-display-lg max-w-3xl text-white">
-          {isFullyPersonalized ? "Picked for your path." : "Not brochures."}
+          {isFullyPersonalized ? "Degrees for your path." : "Not brochures."}
           <br />
           <span className="text-white/75">
             {isFullyPersonalized
-              ? "Programs matched to you."
-              : "Actual programs. Actual people."}
+              ? "Specific majors matched to you."
+              : "Actual programs. Actual degrees."}
           </span>
         </h2>
       </div>

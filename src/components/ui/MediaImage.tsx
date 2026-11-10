@@ -13,7 +13,9 @@ interface MediaImageProps {
   fill?: boolean;
 }
 
-/** Renders local ASU asset with automatic Unsplash fallback on missing file */
+const DEFAULT_FALLBACK_IMAGE = "/images/scenes/opening.jpg";
+
+/** Renders local ASU asset with automatic local fallback on missing file */
 export function MediaImage({
   asset,
   className = "object-cover",
@@ -27,6 +29,17 @@ export function MediaImage({
     setSrc(asset.local);
   }, [asset.local]);
 
+  const handleError = () => {
+    if (src === asset.local) {
+      setSrc(getMediaFallback(asset));
+      return;
+    }
+
+    if (src !== DEFAULT_FALLBACK_IMAGE) {
+      setSrc(DEFAULT_FALLBACK_IMAGE);
+    }
+  };
+
   return (
     <Image
       src={src}
@@ -35,7 +48,7 @@ export function MediaImage({
       priority={priority}
       className={className}
       sizes={sizes}
-      onError={() => setSrc(getMediaFallback(asset))}
+      onError={handleError}
     />
   );
 }

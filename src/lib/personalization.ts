@@ -5,7 +5,9 @@ export interface PathMoment {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  /** Optional — only for experience/story pages, not degrees.asu.edu */
   href?: string;
+  linkLabel?: string;
 }
 
 export interface MirrorImageFeature {
@@ -71,8 +73,8 @@ export const DEFAULT_CONTENT: PersonalizedContent = {
     },
   ],
   momentum: {
-    stat: "140K+",
-    statLabel: "students charting their own path",
+    stat: "30+",
+    statLabel: "#1 rankings in the last 3 years",
     headline: "The future isn't waiting.",
     subline: "Neither should you.",
     imageSrc:
@@ -117,7 +119,7 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
     ],
     momentum: {
       stat: "#1",
-      statLabel: "in innovation among public universities",
+      statLabel: "in innovation — ahead of MIT & Stanford",
       headline: "Your ideas deserve",
       subline: "a place that builds with you.",
       imageSrc:
@@ -246,7 +248,7 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
     ],
     momentum: {
       stat: "#1",
-      statLabel: "in the U.S. for sustainability",
+      statLabel: "in global impact — ahead of MIT & Penn State",
       headline: "The world needs",
       subline: "people who refuse to accept it as-is.",
       imageSrc:
@@ -288,8 +290,8 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
       },
     ],
     momentum: {
-      stat: "Top 25",
-      statLabel: "undergraduate business program",
+      stat: "No. 17",
+      statLabel: "worldwide for business school research",
       headline: "Your ambition",
       subline: "needs room to move fast.",
       imageSrc:
@@ -422,7 +424,7 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
     ],
     momentum: {
       stat: "#1",
-      statLabel: "university for sustainability in the U.S.",
+      statLabel: "for sustainability — ahead of Stanford & UC Berkeley",
       headline: "The planet",
       subline: "doesn't need spectators.",
       imageSrc: "/images/interests/planet-momentum.jpg",
@@ -463,8 +465,8 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
       },
     ],
     momentum: {
-      stat: "400+",
-      statLabel: "undergraduate degrees to explore",
+      stat: "30+",
+      statLabel: "#1 rankings in the last 3 years",
       headline: "Not knowing",
       subline: "is the most honest place to start.",
       imageSrc:

@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP } from "@/lib/gsap";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { getArizonaBeats } from "@/lib/sprint5-content";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
@@ -70,12 +71,7 @@ export function Scene14Arizona() {
         <div className="grain-overlay absolute inset-0" />
 
         <div className="absolute inset-x-0 top-28 z-10 px-6 md:top-32 md:px-16">
-          <p
-            className="font-mono text-xs tracking-[0.25em] uppercase"
-            style={{ color: accentColor }}
-          >
-            The Southwest
-          </p>
+          <SceneKicker>The Southwest</SceneKicker>
           <h2 className="text-display-md mt-2 max-w-lg text-white">
             Arizona isn&apos;t a backdrop.
             <span className="text-white/75"> It&apos;s part of the story.</span>

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger, registerGSAP } from "@/lib/gsap";
 import { PathPanel } from "@/components/ui/PathPanel";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
 
@@ -72,12 +73,9 @@ export function Scene5PathReveal() {
         ref={headingRef}
         className="pointer-events-none absolute top-0 right-0 left-0 z-20 px-6 pt-28 md:px-16 md:pt-32"
       >
-        <p
-          className="mb-2 font-mono text-xs tracking-[0.25em] uppercase"
-          style={{ color: accentColor }}
-        >
+        <SceneKicker className="mb-2">
           {hasSelection ? "Your path" : "Explore paths"}
-        </p>
+        </SceneKicker>
         <h2 className="text-display-md max-w-lg text-white">
           Three moments that could be yours.
         </h2>
