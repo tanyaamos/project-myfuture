@@ -7,6 +7,7 @@ interface ConnectionPathTileProps {
   headline: string;
   description: string;
   href: string;
+  ctaLabel?: string;
   index: number;
   accentColor: string;
   external?: boolean;
@@ -17,6 +18,7 @@ export function ConnectionPathTile({
   headline,
   description,
   href,
+  ctaLabel = "Explore",
   index,
   accentColor,
   external = true,
@@ -54,7 +56,7 @@ export function ConnectionPathTile({
         className="mt-6 inline-flex items-center gap-2 font-display text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1"
         style={{ color: accentColor }}
       >
-        Explore
+        {ctaLabel}
         <span aria-hidden="true">→</span>
       </span>
     </motion.a>

@@ -60,8 +60,7 @@ export const DEFAULT_SPRINT3: Sprint3Content = {
       headline: "You're part of the story.",
       description:
         "ASU's immersive VR biology lab uses gripping storytelling to teach concepts — students retain more and raise grades by a full letter.",
-      imageSrc:
-        "https://images.unsplash.com/photo-1592478411213-76181894ffd2?auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/campus-immersion/dreamscape.jpg",
       imageAlt: "Immersive virtual reality learning environment",
     },
     {
@@ -127,8 +126,7 @@ export const SPRINT3_CONTENT: Record<InterestId, Sprint3Content> = {
         headline: "Learn inside the story.",
         description:
           "Immersive VR labs that shift how biology is taught — powerful technology and gripping narrative combined.",
-        imageSrc:
-          "https://images.unsplash.com/photo-1592478411213-76181894ffd2?auto=format&fit=crop&w=1600&q=80",
+        imageSrc: "/images/campus-immersion/dreamscape.jpg",
         imageAlt: "Virtual reality learning experience",
       },
       {

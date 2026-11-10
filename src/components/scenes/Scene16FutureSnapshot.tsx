@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, registerGSAP } from "@/lib/gsap";
 import { buildFutureSnapshot, shareSnapshot } from "@/lib/snapshot";
 import { FutureSnapshotCard } from "@/components/ui/FutureSnapshotCard";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { ThemeAccentGlow } from "@/components/ui/ThemeAccentGlow";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
@@ -92,12 +93,9 @@ export function Scene16FutureSnapshot() {
             animate={{ opacity: revealStep >= 1 ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p
-              className="font-mono text-xs tracking-[0.3em] uppercase"
-              style={{ color: accentColor }}
-            >
+            <SceneKicker>
               {isFullyPersonalized ? "This is your path" : "Your snapshot"}
-            </p>
+            </SceneKicker>
             <h2 className="text-display-md mt-2 text-white">
               {isFullyPersonalized ? "Your Future Snapshot" : "Keep exploring"}
             </h2>

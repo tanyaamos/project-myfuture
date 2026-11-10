@@ -33,8 +33,12 @@ export function ExperienceShell() {
 
   return (
     <>
-      <ProgressIndicator progress={progress} />
-      <AsuBrandHeader />
+      <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 px-5 pt-4 pb-3 md:px-8">
+        <AsuBrandHeader />
+        <div className="mt-3">
+          <ProgressIndicator progress={progress} />
+        </div>
+      </header>
 
       <main id="main-content" className="relative">
         <Scene1Opening />

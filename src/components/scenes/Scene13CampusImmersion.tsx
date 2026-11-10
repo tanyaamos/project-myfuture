@@ -11,17 +11,21 @@ import {
   getCampusImmersionStudentMedia,
 } from "@/lib/media";
 import { getCampusImmersion } from "@/lib/sprint5-content";
-import { getDegreesBrowseForInterest } from "@/lib/asu-links";
+import { ASU_LINKS } from "@/lib/asu-links";
 import { ExploreLink } from "@/components/ui/ExploreLink";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
+
+/** Set true to show the student portrait overlay on the right */
+const SHOW_STUDENT_PORTRAIT = false;
 
 export function Scene13CampusImmersion() {
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
   const setCurrentScene = useExperienceStore((s) => s.setCurrentScene);
-  const { selectedCampus, selectedInterest, accentColor } = usePersonalizedContent();
+  const { selectedCampus, accentColor } = usePersonalizedContent();
   const immersion = getCampusImmersion(selectedCampus);
   const campusMedia = getCampusImmersionMedia(selectedCampus);
   const studentMedia = getCampusImmersionStudentMedia(selectedCampus);
@@ -106,39 +110,37 @@ export function Scene13CampusImmersion() {
           </AnimatePresence>
         </div>
 
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={`student-${selectedCampus ?? "default"}`}
-            data-immersion-student
-            className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-[min(55vw,680px)]"
-            initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            aria-hidden="true"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/50 to-transparent" />
-            <MediaImage
-              asset={studentMedia}
-              priority={Boolean(selectedCampus)}
-              sizes="(max-width: 768px) 70vw, 680px"
-              className="object-cover object-[center_20%]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/30" />
-          </motion.div>
-        </AnimatePresence>
+        {SHOW_STUDENT_PORTRAIT ? (
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={`student-${selectedCampus ?? "default"}`}
+              data-immersion-student
+              className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-[min(55vw,680px)]"
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              aria-hidden="true"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/50 to-transparent" />
+              <MediaImage
+                asset={studentMedia}
+                priority={Boolean(selectedCampus)}
+                sizes="(max-width: 768px) 70vw, 680px"
+                className="object-cover object-[center_20%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/30" />
+            </motion.div>
+          </AnimatePresence>
+        ) : null}
 
         <ThemeAccentGlow color={accentColor} />
 
         <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-20 md:px-16 md:pb-28 lg:px-24">
           <div ref={contentRef} className="max-w-2xl">
-            <p
-              data-immersion-line
-              className="mb-4 font-mono text-xs tracking-[0.3em] uppercase"
-              style={{ color: accentColor }}
-            >
+            <SceneKicker className="mb-4" data-immersion-line>
               {immersion.campusLabel}
-            </p>
+            </SceneKicker>
 
             <div className="line-reveal-mask">
               <p
@@ -172,8 +174,8 @@ export function Scene13CampusImmersion() {
 
             <div data-immersion-line>
               <ExploreLink
-                href={getDegreesBrowseForInterest(selectedInterest)}
-                label="Browse degrees on degrees.asu.edu"
+                href={ASU_LINKS.campuses}
+                label="Explore ASU campuses"
                 accentColor={accentColor}
                 className="mt-8"
               />

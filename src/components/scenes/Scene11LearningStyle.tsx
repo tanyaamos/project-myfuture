@@ -7,6 +7,7 @@ import { gsap, registerGSAP } from "@/lib/gsap";
 import { LEARNING_STYLES } from "@/lib/sprint4-content";
 import { ASU_LINKS } from "@/lib/asu-links";
 import { ChoiceTile } from "@/components/ui/ChoiceTile";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { useExperienceStore } from "@/store/experience-store";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 
@@ -62,12 +63,7 @@ export function Scene11LearningStyle() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 md:px-12">
-        <p
-          className="mb-4 font-mono text-xs tracking-[0.25em] uppercase"
-          style={{ color: accentColor }}
-        >
-          Go deeper
-        </p>
+        <SceneKicker className="mb-4">Go deeper</SceneKicker>
 
         <motion.h2
           ref={headingRef}

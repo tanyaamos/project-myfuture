@@ -417,6 +417,7 @@ export interface ConnectionPath {
   headline: string;
   description: string;
   href: string;
+  ctaLabel?: string;
   external?: boolean;
 }
 
@@ -428,17 +429,18 @@ export function getConnectionPaths(
   const college = getCollegeForInterest(interestId);
   const degreesBrowse = getDegreesBrowseForInterest(interestId);
 
+  const isGeneralVisit =
+    !campusId || campusId === "undecided" || campusId === "online";
+
   return [
     {
       id: "visit",
       label: "Experience ASU",
-      headline:
-        campusId && campusId !== "undecided" && campusId !== "online"
-          ? `Visit ${campus.label}.`
-          : "Walk the campus.",
+      headline: isGeneralVisit ? "Walk the campus." : `Visit ${campus.label}.`,
       description:
         "In-person tours led by current students — see the labs, the energy, the places you'd call yours.",
-      href: getCampusVisitLink(campusId),
+      href: isGeneralVisit ? ASU_LINKS.visit : getCampusVisitLink(campusId),
+      ctaLabel: isGeneralVisit ? "Schedule" : "Explore",
       external: true,
     },
     {

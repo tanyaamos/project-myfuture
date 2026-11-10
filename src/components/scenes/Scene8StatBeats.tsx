@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { registerGSAP, ScrollTrigger } from "@/lib/gsap";
 import { StatBeatPanel } from "@/components/ui/StatBeatPanel";
 import { ThemeAccentGlow } from "@/components/ui/ThemeAccentGlow";
+import { SceneKicker } from "@/components/ui/SceneKicker";
 import { usePersonalizedContent } from "@/hooks/usePersonalizedContent";
 import { useExperienceStore } from "@/store/experience-store";
 
@@ -88,12 +89,7 @@ export function Scene8StatBeats() {
         <ThemeAccentGlow color={accentColor} />
 
         <div className="absolute inset-x-0 top-28 z-20 px-6 md:top-32 md:px-16">
-          <p
-            className="font-mono text-xs tracking-[0.25em] uppercase"
-            style={{ color: accentColor }}
-          >
-            What does it mean?
-          </p>
+          <SceneKicker>What does it mean?</SceneKicker>
         </div>
 
         <div
