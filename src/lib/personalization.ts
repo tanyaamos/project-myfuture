@@ -155,8 +155,7 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
       {
         title: "Connect across cultures",
         description: "Global health initiatives and cross-cultural programs that expand who you can reach.",
-        imageSrc:
-          "https://images.unsplash.com/photo-1488523789244-0d3859664576?auto=format&fit=crop&w=1600&q=80",
+        imageSrc: "/images/interests/help-path-3.jpg",
         imageAlt: "Students on a global service trip",
       },
     ],
@@ -234,15 +233,13 @@ export const PERSONALIZED_CONTENT: Record<InterestId, PersonalizedContent> = {
       {
         title: "Global impact",
         description: "Study abroad, Peace Corps prep, and international development — think beyond borders.",
-        imageSrc:
-          "https://images.unsplash.com/photo-1488523789244-0d3859664576?auto=format&fit=crop&w=1600&q=80",
+        imageSrc: "/images/interests/change-world-path-3.jpg",
         imageAlt: "Global community gathering",
       },
       {
         title: "Sustainability in action",
         description: "Solar research, urban planning, and green initiatives — ASU leads in sustainability.",
-        imageSrc:
-          "https://images.unsplash.com/photo-1473341304170-971dccb5acae?auto=format&fit=crop&w=1600&q=80",
+        imageSrc: "/images/interests/change-world-path-2.jpg",
         imageAlt: "Solar panels and sustainable campus",
       },
     ],

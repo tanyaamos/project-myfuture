@@ -81,7 +81,7 @@ Policy, advocacy, and community orgs where your voice moves the needle.
 Global health initiatives and cross-cultural programs that expand who you can reach.
 
 - **Image alt:** Students on a global service trip
-- **Image:** `https://images.unsplash.com/photo-1488523789244-0d3859664576?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/interests/help-path-3.jpg`
 
 ---
 
@@ -124,14 +124,14 @@ School of Public Affairs, sustainability law, and civic engagement programs with
 Study abroad, Peace Corps prep, and international development — think beyond borders.
 
 - **Image alt:** Global community gathering
-- **Image:** `https://images.unsplash.com/photo-1488523789244-0d3859664576?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/interests/change-world-path-3.jpg`
 
 ### 3. Sustainability in action
 
 Solar research, urban planning, and green initiatives — ASU leads in sustainability.
 
 - **Image alt:** Solar panels and sustainable campus
-- **Image:** `https://images.unsplash.com/photo-1473341304170-971dccb5acae?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/interests/change-world-path-2.jpg`
 
 ---
 
