@@ -35,7 +35,7 @@ A nationally recognized honors experience with exclusive courses, personalized m
 - **Degree:** Barrett Honors programs
 - **Link:** https://degrees.asu.edu/bachelors/major-list/accelerated-programs
 - **Image alt:** Honors students walking on campus
-- **Image:** `https://images.unsplash.com/photo-1541339907198-e08756dedf32?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/scenes/barrett-community.jpg`
 
 ### 3. Sun Devil Welcome
 
@@ -45,7 +45,7 @@ Before classes even start — marching band, Sparky, President Crow, and 70,000 
 - **Degree:** Undergraduate degrees
 - **Link:** https://degrees.asu.edu/bachelors
 - **Image alt:** Stadium filled with cheering students
-- **Image:** `https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/scenes/sun-devil-welcome.jpg`
 
 ---
 

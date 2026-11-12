@@ -45,8 +45,7 @@ export const DEFAULT_CONTENT: PersonalizedContent = {
     headline: "Yours is",
     emphasis: "still forming.",
     subline: "Choose what pulls you in above — and watch the story shift.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1523580495183-7fccf8c64754?auto=format&fit=crop&w=2400&q=80",
+    imageSrc: "/images/scenes/default-mirror.jpg",
     imageAlt: "Student looking toward the horizon on campus",
   },
   paths: [

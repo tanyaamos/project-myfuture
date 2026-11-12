@@ -3,11 +3,10 @@
 import { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useGSAP } from "@gsap/react";
-import { gsap, registerGSAP, ScrollTrigger } from "@/lib/gsap";
+import { gsap, registerGSAP } from "@/lib/gsap";
 import { INTERESTS } from "@/lib/interests";
 import { FloatingInterestCard } from "@/components/ui/FloatingInterestCard";
 import { getDegreesBrowseForInterest } from "@/lib/asu-links";
-import { useLenisInstance } from "@/context/LenisContext";
 import { useExperienceStore } from "@/store/experience-store";
 
 /** Desktop scattered positions — mobile uses stacked layout below */
@@ -26,12 +25,10 @@ const DESKTOP_POSITIONS = [
 export function Scene3Interests() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const pinTriggerRef = useRef<ScrollTrigger | null>(null);
   const selectedInterest = useExperienceStore((s) => s.selectedInterest);
   const currentScene = useExperienceStore((s) => s.currentScene);
   const setSelectedInterest = useExperienceStore((s) => s.setSelectedInterest);
   const setCurrentScene = useExperienceStore((s) => s.setCurrentScene);
-  const lenis = useLenisInstance();
 
   const isGated = currentScene === "interests" && selectedInterest === null;
 
@@ -64,42 +61,6 @@ export function Scene3Interests() {
       );
     },
     { scope: sectionRef, dependencies: [selectedInterest] },
-  );
-
-  useGSAP(
-    () => {
-      registerGSAP();
-      const section = sectionRef.current;
-      if (!section) return;
-
-      pinTriggerRef.current?.kill();
-      pinTriggerRef.current = null;
-
-      if (selectedInterest) {
-        ScrollTrigger.refresh();
-        return;
-      }
-
-      pinTriggerRef.current = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        onLeave: () => {
-          if (!useExperienceStore.getState().selectedInterest) {
-            lenis?.scrollTo("#scene-interests", { offset: 0, duration: 0.9 });
-          }
-        },
-      });
-
-      return () => {
-        pinTriggerRef.current?.kill();
-        pinTriggerRef.current = null;
-      };
-    },
-    { scope: sectionRef, dependencies: [selectedInterest, lenis] },
   );
 
   return (

@@ -36,6 +36,7 @@ Sources: `src/components/scenes/Scene12CampusChoice.tsx`, `src/lib/sprint4-conte
 - **Program:** Sun Devil Welcome · Tempe
 - **Headline:** 70,000 Sun Devils. One stadium.
 - Mountain America Stadium, Big 12 athletics, and the Inferno student section — pure passion before classes even start.
+- **Image:** `/images/scenes/sun-devil-welcome.jpg`
 
 **Belonging line:** Picture yourself on campus — you belong.
 

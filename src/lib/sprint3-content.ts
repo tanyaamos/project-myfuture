@@ -68,8 +68,7 @@ export const DEFAULT_SPRINT3: Sprint3Content = {
       headline: "8,000 students. One community.",
       description:
         "A nationally recognized honors experience with exclusive courses, personalized mentorship, and 600+ academic experiences every semester.",
-      imageSrc:
-        "https://images.unsplash.com/photo-1541339907198-e08756dedf32?auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/scenes/barrett-community.jpg",
       imageAlt: "Honors students walking on campus",
     },
     {
@@ -77,8 +76,7 @@ export const DEFAULT_SPRINT3: Sprint3Content = {
       headline: "Pure passion and fire.",
       description:
         "Before classes even start — marching band, Sparky, President Crow, and 70,000 Sun Devils welcoming you home at Mountain America Stadium.",
-      imageSrc:
-        "https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/scenes/sun-devil-welcome.jpg",
       imageAlt: "Stadium filled with cheering students",
     },
   ],
