@@ -76,7 +76,7 @@ export const DEFAULT_SPRINT3: Sprint3Content = {
       headline: "Pure passion and fire.",
       description:
         "Before classes even start — marching band, Sparky, President Crow, and 70,000 Sun Devils welcoming you home at Mountain America Stadium.",
-      imageSrc: "/images/scenes/sun-devil-welcome.jpg",
+      imageSrc: "/images/scenes/sun-devil-welcome1.jpg",
       imageAlt: "Stadium filled with cheering students",
     },
   ],

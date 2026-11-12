@@ -45,7 +45,7 @@ Before classes even start — marching band, Sparky, President Crow, and 70,000 
 - **Degree:** Undergraduate degrees
 - **Link:** https://degrees.asu.edu/bachelors
 - **Image alt:** Stadium filled with cheering students
-- **Image:** `/images/scenes/sun-devil-welcome.jpg`
+- **Image:** `/images/scenes/sun-devil-welcome1.jpg`
 
 ---
 

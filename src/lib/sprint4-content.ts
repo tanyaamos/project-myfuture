@@ -164,7 +164,7 @@ const CAMPUS_OVERLAYS: Record<
       headline: "70,000 Sun Devils. One stadium.",
       description:
         "Mountain America Stadium, Big 12 athletics, and the Inferno student section — pure passion before classes even start.",
-      imageSrc: "/images/scenes/sun-devil-welcome.jpg",
+      imageSrc: "/images/scenes/sun-devil-welcome1.jpg",
       imageAlt: "Sun Devil stadium energy",
     },
     belonging: {
