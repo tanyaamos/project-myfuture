@@ -25,7 +25,7 @@ Study wildlife patterns and climate change on a 10-day expedition — polar plun
 ASU California Center — steps from the Fashion District and the film industry. Student housing at Broadway Palace.
 
 - **Image alt:** ASU California Center in downtown Los Angeles
-- **Image:** `https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80`
+- **Image:** `/images/places/los-angeles.jpg`
 - **Learn more:** https://degrees.asu.edu/bachelors/major/ASU00/HIFMPBFA/film-and-media-production
 
 ## 3. London

@@ -140,8 +140,7 @@ export const GLOBAL_PLACES: PathMoment[] = [
     title: "Los Angeles",
     description:
       "ASU California Center — steps from the Fashion District and the film industry. Student housing at Broadway Palace.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    imageSrc: "/images/places/los-angeles.jpg",
     imageAlt: "ASU California Center in downtown Los Angeles",
     href: getPlaceLink("Los Angeles"),
   },
